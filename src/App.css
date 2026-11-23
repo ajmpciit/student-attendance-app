@@ -8,8 +8,6 @@
 }
 
 .top-shell {
-  max-width: 1120px;
-  margin: 0 auto;
   overflow: hidden;
   background: #f1f1f1;
 }
@@ -22,11 +20,11 @@
 }
 
 .page-header {
-  min-height: 64px;
+  min-height: 74px;
   justify-content: space-between;
   box-sizing: border-box;
   margin-bottom: 0;
-  padding: 10px 20px;
+  padding: 18px 20px 12px;
   background: #d2d2d2;
 }
 
@@ -62,8 +60,12 @@
 
 .summary-cards {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) repeat(3, max-content);
+  grid-template-columns: 1.5fr repeat(3, minmax(0, 1fr));
   gap: 14px;
+  width: 100%;
+  max-width: 1120px;
+  box-sizing: border-box;
+  margin: 0 auto;
   padding: 20px;
   background: #f1f1f1;
 }
@@ -118,7 +120,9 @@
 }
 
 .roster-card {
+  width: 100%;
   max-width: 1120px;
+  box-sizing: border-box;
   margin: 18px auto 0;
   overflow: hidden;
   border: 1px solid #e5e9f0;
@@ -173,8 +177,8 @@ td:last-child {
 }
 
 td {
-  height: 72px;
-  padding: 10px 20px;
+  height: 52px;
+  padding: 6px 20px;
   border-top: 1px solid #f0f2f5;
   color: #69758a;
   vertical-align: middle;
@@ -234,8 +238,7 @@ td {
 
 @media (max-width: 640px) {
   .summary-cards {
-    grid-template-columns: repeat(3, max-content);
-    justify-content: space-between;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     padding: 14px;
   }
 
@@ -246,8 +249,8 @@ td {
 
 @media (max-width: 560px) {
   .page-header {
-    min-height: 58px;
-    padding: 8px 12px;
+    min-height: 66px;
+    padding: 14px 12px 8px;
   }
 
   .page-header h1 {

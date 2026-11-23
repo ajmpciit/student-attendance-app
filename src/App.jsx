@@ -3,16 +3,16 @@ import { STATUS, markAttendance } from "./lib/attendance";
 import "./App.css";
 
 const INITIAL = [
-  { studentId: "s1", name: "Alice", status: STATUS.PRESENT },
-  { studentId: "s2", name: "Bob", status: STATUS.PRESENT },
-  { studentId: "s3", name: "Charlie", status: STATUS.PRESENT },
-  { studentId: "s4", name: "Dana", status: STATUS.PRESENT },
-  { studentId: "s5", name: "Ethan", status: STATUS.PRESENT },
-  { studentId: "s6", name: "Fiona", status: STATUS.PRESENT },
-  { studentId: "s7", name: "Gavin", status: STATUS.PRESENT },
-  { studentId: "s8", name: "Hannah", status: STATUS.PRESENT },
-  { studentId: "s9", name: "Isaac", status: STATUS.PRESENT },
-  { studentId: "s10", name: "Jasmine", status: STATUS.PRESENT },
+  { studentId: "s1", name: "Alice", status: STATUS.DEFAULT },
+  { studentId: "s2", name: "Bob", status: STATUS.DEFAULT },
+  { studentId: "s3", name: "Charlie", status: STATUS.DEFAULT },
+  { studentId: "s4", name: "Dana", status: STATUS.DEFAULT },
+  { studentId: "s5", name: "Ethan", status: STATUS.DEFAULT },
+  { studentId: "s6", name: "Fiona", status: STATUS.DEFAULT },
+  { studentId: "s7", name: "Gavin", status: STATUS.DEFAULT },
+  { studentId: "s8", name: "Hannah", status: STATUS.DEFAULT },
+  { studentId: "s9", name: "Isaac", status: STATUS.DEFAULT },
+  { studentId: "s10", name: "Jasmine", status: STATUS.DEFAULT },
 ];
 
 const STATUS_SEQUENCE = [
