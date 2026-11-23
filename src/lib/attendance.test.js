@@ -2,7 +2,8 @@ import { describe, it, expect } from 'vitest';
 import {
   calculateAttendanceRate,
   isEligibleForExam,
-  markAttendance
+  markAttendance,
+  STATUS
 } from './attendance';
 
 const present = id => ({ studentId: id, status: 'present' });
@@ -47,6 +48,11 @@ describe('isEligibleForExam', () => {
 });
 
 describe('markAttendance', () => {
+  it('accepts the default status', () => {
+    const r = [present('s1')];
+    expect(markAttendance(r, 's1', STATUS.DEFAULT)[0].status).toBe('default');
+  });
+
   it('updates an existing student status', () => {
     const r = [present('s1')];
     expect(markAttendance(r, 's1', 'absent')[0].status).toBe('absent');

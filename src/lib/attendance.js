@@ -1,4 +1,5 @@
 export const STATUS = {
+  DEFAULT: 'default',
   PRESENT: 'present',
   ABSENT: 'absent',
   LATE: 'late'
