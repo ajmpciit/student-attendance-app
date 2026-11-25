@@ -99,14 +99,3 @@ npm run test:coverage
 ## Current Data Behavior
 
 The application currently stores attendance data in React state. Changes remain available while the page is open, but they are reset when the page is refreshed. There is no database, authentication, API, or user account system yet.
-
-## Potential Future Improvements
-
-- Save attendance in a database or browser storage.
-- Add student creation and removal.
-- Separate sections and class schedules.
-- Preserve daily attendance history.
-- Generate attendance reports.
-- Implement exam eligibility in the interface.
-- Allow users to select and change the attendance date.
-- Add authentication and role-based teacher access.
