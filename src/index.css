@@ -1,0 +1,25 @@
+:root {
+  font-family: Roboto, Arial, sans-serif;
+  color: #34414d;
+  background: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f1f1f1;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+button,
+table {
+  font-family: inherit;
+}

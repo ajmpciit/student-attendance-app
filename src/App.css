@@ -1,0 +1,306 @@
+.app {
+  width: 100%;
+  min-height: 100svh;
+  box-sizing: border-box;
+  padding: 0;
+  background: #f1f1f1;
+  text-align: left;
+}
+
+.top-shell {
+  overflow: hidden;
+  background: #f1f1f1;
+}
+
+.page-header,
+.roster-header,
+.student {
+  display: flex;
+  align-items: center;
+}
+
+.page-header {
+  min-height: 74px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  padding: 18px 20px 12px;
+  background: #d2d2d2;
+}
+
+.page-header h1 {
+  margin: 0 0 2px;
+  color: #34414d;
+  font-size: 17px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.section-label {
+  margin: 0;
+  color: #34414d;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.date-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 31px;
+  box-sizing: border-box;
+  padding: 0 13px;
+  border-radius: 999px;
+  background: #34414d;
+  color: #e8e8e8;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  max-width: 1120px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+.stat-card {
+  min-width: 0;
+  min-height: 66px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 13px;
+  border: 0;
+  border-radius: 10px;
+  background: #f4f4f4;
+}
+
+.stat-copy {
+  min-width: 0;
+}
+
+.stat-copy strong,
+.stat-copy p {
+  display: block;
+  white-space: normal;
+}
+
+.stat-copy strong {
+  color: #34414d;
+  font-size: 17px;
+  line-height: 1.05;
+}
+
+.stat-copy p {
+  margin: 5px 0 0;
+  color: #34414d;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.summary-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+  flex: 0 0 28px;
+}
+
+.summary-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.roster-card {
+  width: 100%;
+  max-width: 1120px;
+  box-sizing: border-box;
+  margin: 18px auto 0;
+  overflow: hidden;
+  border: 1px solid #e5e9f0;
+  border-radius: 14px;
+  background: #f8f8f8;
+  box-shadow: 0 10px 30px rgba(52, 65, 77, 0.06);
+}
+
+.roster-header {
+  justify-content: space-between;
+  min-height: 72px;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.roster-header h2 {
+  margin: 0;
+  color: #34414d;
+  font-size: 20px;
+}
+
+.student-count {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #d2d2d2;
+  color: #34414d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  height: 43px;
+  padding: 0 20px;
+  background: #fafbfc;
+  color: #98a1af;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+th:last-child,
+td:last-child {
+  text-align: right;
+}
+
+td {
+  height: 52px;
+  padding: 6px 20px;
+  border-top: 1px solid #f0f2f5;
+  color: #69758a;
+  vertical-align: middle;
+}
+
+.student {
+  gap: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.student strong {
+  color: #34414d;
+  font-size: 14px;
+}
+
+.cycle-status {
+  width: 30px;
+  height: 30px;
+  display: inline-grid;
+  place-items: center;
+  padding: 3px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 160ms ease;
+}
+
+.cycle-status:hover {
+  transform: scale(1.08);
+}
+
+.cycle-status:focus-visible {
+  outline: 3px solid rgba(102, 126, 234, 0.24);
+  outline-offset: 2px;
+}
+
+.cycle-status svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.attendance-star {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.attendance-star svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .summary-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 14px;
+  }
+
+  .stat-card:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-header {
+    min-height: 66px;
+    padding: 14px 12px 8px;
+  }
+
+  .page-header h1 {
+    font-size: 17px;
+  }
+
+  .section-label {
+    font-size: 12px;
+  }
+
+  .date-badge {
+    height: 28px;
+    padding: 0 9px;
+    font-size: 10px;
+  }
+
+  .summary-cards {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .stat-card {
+    min-height: 68px;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .summary-icon {
+    width: 24px;
+    height: 24px;
+    flex-basis: 24px;
+  }
+
+  .stat-copy strong {
+    font-size: 16px;
+  }
+
+  .stat-copy p {
+    margin-top: 4px;
+    font-size: 11px;
+  }
+
+  .roster-card {
+    margin-top: 10px;
+  }
+
+  th,
+  td {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+}
