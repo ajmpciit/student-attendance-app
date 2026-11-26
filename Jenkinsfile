@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         // This must match the NodeJS tool name configured in Jenkins (e.g., 'node20')
-        nodejs 'node20' 
+        nodejs 'node24' 
     }
 
     environment {
