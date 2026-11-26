@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "coverage"
+    "test": "coverage",
+    "dev": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
     "jest": "^30.3.0"
