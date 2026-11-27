@@ -72,7 +72,9 @@ pipeline {
             // Run on develop and main
             when { anyOf { branch 'main'; branch 'develop' } }
             steps {
-                sh 'npm run build'
+               sh 'npm install'
+               
+                sh 'NODE_ENV=production npm run build'
             }
         }
 
