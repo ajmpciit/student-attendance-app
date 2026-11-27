@@ -37,7 +37,7 @@ pipeline {
         stage('SonarQube Analysis') {
             tools {
         // Fill in the JDK name you configured in Global Tool Configuration
-        jdk 'JDK9' 
+        jdk 'JDK21' 
          }
             environment {
                 scannerHome = tool 'SonarQube Scanner'
