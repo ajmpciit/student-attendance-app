@@ -24,6 +24,7 @@ pipeline {
                 // Using npm install instead of npm ci to bypass the peer dependency issues
                 sh 'npm install --legacy-peer-deps'
                 sh 'npm run test:coverage'
+                sh 'npm install --include=dev'
             }
         }
 
@@ -72,9 +73,8 @@ pipeline {
             // Run on develop and main
             when { anyOf { branch 'main'; branch 'develop' } }
             steps {
-               sh 'npm install'
-               
-                sh 'NODE_ENV=production npm run build'
+               withEnv(['NODE_ENV=production']) {
+                sh 'npm run build'
             }
         }
 
