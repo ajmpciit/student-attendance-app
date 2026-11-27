@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest, NODE_OPTIONS=--experimental-vm-modules jest",
     "test:coverage": "jest --coverage",
     "dev": "vite",
     "build": "npx vite build"
