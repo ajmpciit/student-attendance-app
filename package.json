@@ -6,7 +6,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "dev": "vite",
-    "build": "vite build"
+    "build": "npx vite build"
   },
   "devDependencies": {
     "jest": "^30.3.0"
