@@ -77,6 +77,7 @@ pipeline {
                 sh 'npm run build'
             }
         }
+    }
 
         stage('Archive Artifact') {
             // ONLY run on the main branch
