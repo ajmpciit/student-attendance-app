@@ -35,6 +35,18 @@ pipeline {
         }
 
         stage('SonarQube Analysis') {
+            tools {
+        // Fill in the JDK name you configured in Global Tool Configuration
+        jdk 'jdk17' 
+         }
+            environment {
+                scannerHome = tool 'SonarQube Scanner'
+        }
+             steps {
+        withSonarQubeEnv('SonarQube') {
+            sh "${scannerHome}/bin/sonar-scanner"
+             }
+        }
             // ONLY run on the main branch
             when { branch 'main' }
             steps {
