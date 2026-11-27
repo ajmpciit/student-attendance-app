@@ -44,7 +44,7 @@ pipeline {
         }
              steps {
         withSonarQubeEnv('SonarQube') {
-            sh "${scannerHome}/bin/sonar-scanner"
+            sh "${scannerHome}/bin/java"
              }
         }
             // ONLY run on the main branch
