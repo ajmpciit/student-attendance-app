@@ -51,6 +51,7 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQube') {
                      // Assuming npx is available
+                     sh "${scannerHome}/bin/sonar-scanner -Dsonar.qualitygate.wait=true"
                      sh 'npx sonar-scanner'
                 }
             }
