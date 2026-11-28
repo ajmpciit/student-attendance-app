@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "npx vitest run --coverage"
   },
   "devDependencies": {
     "jest": "^30.3.0"
