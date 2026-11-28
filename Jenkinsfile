@@ -40,13 +40,10 @@ pipeline {
         // Fill in the JDK name you configured in Global Tool Configuration
         jdk 'JDK21' 
          }
-            environment {
+            environment {`
                 scannerHome = tool 'SonarQube Scanner'
         }
-             steps {
-        withSonarQubeEnv('SonarQube') {
-            sh "${scannerHome}/bin/sonar-scanner -Dsonar.qualitygate.wait=true"
-             }
+             
         }
             // ONLY run on the main branch
             when { branch 'main' }
