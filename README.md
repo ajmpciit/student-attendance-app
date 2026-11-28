@@ -58,9 +58,17 @@ The reusable logic is located in `src/lib/attendance.js`.
 
 ### Installation
 
-```
+```Docker Terminal inside root folder
+Docker build -t jenkins -f Dockerfile-JenkinsSetup .
+
 docker run -d --name jenkins --user root -p 8090:8080 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins
 ```
+
+- Install 'Copy Artifact', 'SonarQube Scanner', 'NodeJS' plugins on Jenkins
+- Add the following tools :
+  - JDK installations : {name: "JDK21", JAVA_HOME: "/opt/java/openjdk"}
+  - SonarQube Scanner installations : {name:"SonarQube Scanner" }
+  - NodeJS installations : {Version: 24.xx.x}
 
 ```bash
 npm install
