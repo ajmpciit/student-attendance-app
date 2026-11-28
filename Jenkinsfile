@@ -49,13 +49,13 @@ pipeline {
              }
         }
             // ONLY run on the main branch
-            // when { branch 'main' }
-            // steps {
-            //     withSonarQubeEnv('SonarQube') {
-            //         // Assuming npx is available
-            //         sh 'npx sonar-scanner'
-            //     }
-            // }
+            when { branch 'main' }
+            steps {
+                withSonarQubeEnv('SonarQube') {
+                     // Assuming npx is available
+                     sh 'npx sonar-scanner'
+                }
+            }
         }
 
         stage('Quality Gate') {
