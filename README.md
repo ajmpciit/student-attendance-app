@@ -58,6 +58,8 @@ The reusable logic is located in `src/lib/attendance.js`.
 
 ### Installation
 
+Jenkins Setup
+
 ```Docker Terminal inside root folder
 Docker build -t jenkins -f Dockerfile-JenkinsSetup .
 
@@ -69,6 +71,10 @@ docker run -d --name jenkins --user root -p 8090:8080 -v jenkins_home:/var/jenki
   - JDK installations : {name: "JDK21", JAVA_HOME: "/opt/java/openjdk"}
   - SonarQube Scanner installations : {name:"SonarQube Scanner" }
   - NodeJS installations : {Version: 24.xx.x}
+- New item > Multibranch Pipeline with name "CI-React-App"
+- Multibranch Pipeline Configurations
+  - Scan Multibranch Pipeline Triggers/"Periodically if not otherwise run" = True, interval: 1 minute
+
 
 ```bash
 npm install
