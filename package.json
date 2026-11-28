@@ -4,8 +4,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "vitest run",
-    "test:coverage": "npx vitest run --coverage"
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "dev": "vite",
+    "build": "npx vite build"
   },
   "devDependencies": {
     "jest": "^30.3.0",
