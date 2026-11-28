@@ -58,6 +58,10 @@ The reusable logic is located in `src/lib/attendance.js`.
 
 ### Installation
 
+```
+docker run -d --name jenkins --user root -p 8090:8080 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins
+```
+
 ```bash
 npm install
 ```
