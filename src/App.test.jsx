@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/dom'
 import userEvent from '@testing-library/user-event'
 import App from './App'                                     // ← runs all top-level consts
 
