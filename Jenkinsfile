@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    agent any 
+    options{
+        copyArtifactPermission('CD-React-App')
+        }
 
     tools {
         // This must match the NodeJS tool name configured in Jenkins (e.g., 'node20')
@@ -40,7 +43,7 @@ pipeline {
         // Fill in the JDK name you configured in Global Tool Configuration
         jdk 'JDK21' 
          }
-            environment {`
+            environment {
                 scannerHome = tool 'SonarQube Scanner'
         }
              
