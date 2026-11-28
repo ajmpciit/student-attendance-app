@@ -46,8 +46,6 @@ pipeline {
             environment {
                 scannerHome = tool 'SonarQube Scanner'
         }
-             
-        }
             // ONLY run on the main branch
             when { branch 'main' }
             steps {
